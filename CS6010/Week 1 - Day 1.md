@@ -37,7 +37,8 @@ We mostly use stuff: /Users/username
 Git is all local based  
 Github is all on the internet  
 ```git status``` - see what is currently saved out on your local repo.  
-```git add``` - add all or specific files to current comments (verison history).   
+```git add``` - add all or specific files to current comments (verison history). 
+  
 * ```<filename>>```. 
 * ```.``` - add all files currently not saved  
 * ```-u``` - any files that were edited, but not newly created  
