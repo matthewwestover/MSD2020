@@ -100,3 +100,24 @@ If(a instanceof C){ // have to go to the lowest level so we can decide what to d
 
 If you write code like this you are doing it wrong. Overriding a single method based on the class type is the better way to do.  
 Only use instanceof only when you are FORCED to take a more general type and you have to call a method that isn’t in the general type
+
+#### Interface vs inheritance? 
+If the classes are related use inheritance (car - coupe - sportscar)  
+If the classes just use similar methods but are topically unrelated use interface  (car - dinosaur - sandwich)  
+
+**Overloading** is resolved at compile time. The compiler looks at the variable types, what version of the methods to run  
+**Overriding** is resolved at runtime based on the objects used  
+
+```super.method();``` calls the parent method. Used when we override in the child class but want to use the parents version. 
+
+If you want to use a grandparent method we cant use super, generally better to write the grandparent as a ```final method()``` (which is locked and cant be overridden) then in the class you are using just call the method on the object
+
+### JavaFx
+Uses interfaces and inheritance all over the place
+
+A *node* is a thing in the Gui. Holds stuff. Everything is inherited from node in the GUI
+
+Window has a stage which displays a scene, which has a parent which contains the nodes  
+Typically only one stage, but you can have multiple scenes that load different pages. 
+A scene has a single parent which has many node objects  
+
