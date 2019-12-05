@@ -157,5 +157,4 @@ Read first 1/21 GB of each sorted chunk into main memory (you need the extra spa
 Do a 20-way merge on the seperate 1/21 chunks from each sorted array chunk.  
  Store this result in output buffer.   
 Once that, output the buffer into the final sorted file  
-Do this 21 total times to get each section of all the chunks.  
-
+Do this 21 total times to get each section of all the chunks.    
