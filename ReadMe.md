@@ -5,6 +5,6 @@
 * CS 6012 - Data Structures and Algorithims
 
 ### Spring 2020
-* CS 6013 - Systems I
-* CS 6014 - Systems II
+* CS 6013 - Systems I - Operating Systems
+* CS 6014 - Systems II - Networking and Security
 * CS 6015 - Software Engineering
