@@ -17,7 +17,7 @@ Don’t want to convert original message with a hash as we can’t get it out to
 **Referring to an object** - shorter names - useful for caching  
 
 #### Important Properties 
-Needs to be similar to a block cypher  
+Needs to be similar to a block cipher  
 Quick to compute  
 Deterministic  
 Given a hash it should be impossible to compute the data. Should be impossible to pick a message that has a particular hash. hash(m) == h, we shouldn’t be able to know what m would be to guarantee that.  

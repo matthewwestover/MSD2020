@@ -1,10 +1,10 @@
 ## Week 7 - Day 1
 ### Sharing Keys
 For Crypto we have certain goals:  
-**Confidentiality** - Block Cypher, Stream Cypher  
+**Confidentiality** - Block cipher, Stream cipher  
 **Authentication** - HMAC (Hash Functions)  
 **Message Integrity** - HMAC  
-**Non-repudiation** (“no take backs” if something was sent can’t say it was never sent) - sender had to have the key to send something. It is sort of achieved due to the block cypher
+**Non-repudiation** (“no take backs” if something was sent can’t say it was never sent) - sender had to have the key to send something. It is sort of achieved due to the block cipher
 
 These all require a shared secret key between two points  
 Making a key is pretty straight forward. Encrypt something, hash something, pseudo random generator, etc.  
@@ -69,10 +69,10 @@ Public Key is <E, N>
 P and Q get thrown away - End result is two public numbers and one private number
 
 Have a message M that has to be shorter than N  
-Cypher Text (encryption): C = M^D % N  
+cipher Text (encryption): C = M^D % N  
 Plain text (decryption): M = C^E % N = M^(DE) % N  
 Because E and N are public, anyone can read it.  
-C is really a a digital signature. Only the sender could generate that specific Cypher Text
+C is really a a digital signature. Only the sender could generate that specific cipher Text
 
 This is way more complicated then the Diffie Hellman calculation 
 DHKE didn’t care what the key was  
@@ -184,9 +184,9 @@ This HAS happened before
 Some signers are now blacklisted and not seen as valid.  
 CAs charge a lot of money to basically validate your ID once then key a certificate on file
 
-### Block Cyphers in Use
+### Block ciphers in Use
 Messages are pretty much never exactly 128 bits.  
-The “Mode of Operation” is how a block cypher sends a long message.  
+The “Mode of Operation” is how a block cipher sends a long message.  
 
 ### Electronic Code Book (ECB)
 Take long message, break up into blocks.  
@@ -196,16 +196,16 @@ New blocks cant be made, but they can be duplicated.
 Possible to do bad stuff based on this - tampering  
 Can be seen in the ECB penguin . Penguin image is encrypted but shape can still be seen.
 
-### Cypher Block Chaining (CBC)
+### cipher Block Chaining (CBC)
 Still use the same key to encrypt like in the ECB  
-However before encrypting, XOR with the cypher text of the previous block  
+However before encrypting, XOR with the cipher text of the previous block  
 First block is XOR with a initialization vector  
 This can help detect tampering. Blocks have to be in order or it breaks.  
 The slightly opens it up to be attacked by bit flips  
 This breaks the previous block however, so it can be noticed. 
 
 ### Output Feedback Mode (OFM)
-Turn the block into a stream cypher.  
+Turn the block into a stream cipher.  
 Make a random block with an Initialization Vector  
 Encrypt to get pseudo random data, repeat to get the stream.  
 

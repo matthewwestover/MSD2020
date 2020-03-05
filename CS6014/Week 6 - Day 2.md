@@ -1,13 +1,13 @@
 ## Week 6 - Day 2
-### Stream Cypher
+### Stream Cipher
 We almost never want to send a single block of data exactly. Data is in different sizes.  
 Sometimes we send longer data (like TCP transfer) or send smaller than a block of data
 
 To generate the stream take your bits of the plain text  
 XOR with a pseudorandom bits of data (key stream)  
-The quality of our cypher depends on the quality of the keystream  
+The quality of our cipher depends on the quality of the keystream  
 If we xor two streams with the same key stream there are issues.  
-Cypher 1 XOR K and Cypher 2 XOR K = Cypher 1 XOR Cypher 2   
+cipher 1 XOR K and cipher 2 XOR K = cipher 1 XOR cipher 2   
 This completely removes the keystream - encryption is then compromised  
 If attackers detect the same key being used this can be figured out  
 Attackers can generate the table to start to guess combinations to figure out what 1 or 2 are. Its not immediate to do, but it is much easier than just cracking with a single key  
@@ -16,7 +16,7 @@ Keystreams are cryptographically secure pseudo random number generator (**CSPRNG
 
 Both ends need to generate the same keystream if one end wants to understand the other  
 No one else should be able to generate the keystream  
-Like block cyphers they share a secret key (usually in 100s of bits in length)  
+Like block ciphers they share a secret key (usually in 100s of bits in length)  
 Truly random number sequences cannot be shared   
 
 Pseudorandom numbers appear “random”:  

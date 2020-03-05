@@ -69,13 +69,13 @@ Mixing these things/repeating these things can make it very complicated
 
 How to attack the combination of these:
   
-* Cypher text only - only see the cypher data  
-* Known plain text - cypher + plaintext (how enigma was broken)  
+* Cipher text only - only see the cipher data  
+* Known plain text - cipher + plaintext (how enigma was broken)  
 * Chosen plain text - attacker their own plaintext encrypted  
 
-#### Cyphertext
+#### ciphertext
 Should appear random  
-Small changes in plaintext should result in large changes in the cypher text (small input change == large output change)  
+Small changes in plaintext should result in large changes in the cipher text (small input change == large output change)  
 “Avalanche Effect”  
 Possibly combining the three main building blocks in various orders
 

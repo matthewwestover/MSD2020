@@ -1,13 +1,13 @@
 ## Week 6 - Day 1
-### Symmetric Block Cyphers 
+### Symmetric Block Ciphers 
 Encryption and Decryption use the same key  
 Shared secret key  
 Both sides must know this key, no one else should  
 This is in fixed sized chunks of data - Historically 64 bits, more commonly 128 bits now  
-The longer the key the more “secure” the cypher - 256 bits is suggested these days  
+The longer the key the more “secure” the cipher - 256 bits is suggested these days  
 Have to encrypt not used sections of the bit block if it isn’t full  
 Fixed size makes these really fast  
-Two main parameters to describe a block cypher is key size and block size. 
+Two main parameters to describe a block cipher is key size and block size. 
 
 Popular Block Chains:
 **DES** - Data Encryption Standard - from 1977 (don’t use this)  
@@ -15,11 +15,11 @@ Popular Block Chains:
 **AES** - Advanced Encryption Standard - standardized in 2001 - developed from a scientific contest
 
 **Ideal**  
-If the cypher is perfect, the only way to crack it is brute force.  
+If the cipher is perfect, the only way to crack it is brute force.  
 If the key is k size, there are 2^k possible keys to try  
 On average you half to guess half of the keys before cracking in brute force  
 You expect 2^(k-1) work required to decode without knowing the key  
-Anything less weakens the cypher
+Anything less weakens the cipher
 
 ### DES
 Key Size: 56 bits - too small (super computer cracked this in the 90s now pretty easy to have power to do it)   
@@ -53,7 +53,7 @@ Inefficient in software. Bit swapping is annoying computers like working on byte
 It was developed secretly - raises questions about how trusted it can be
 
 ### AES
-Block Cypher of choice - in use all the time  
+Block cipher of choice - in use all the time  
 Developed in a public contest - it was vetted and tested openly
 128 bit blocks  
 128, 192, 256 bit key lengths  
@@ -69,7 +69,7 @@ It is software efficient, cpu has specialized AES instructions.
 |  9 | 10 | 11 | 12 |
 | 13 | 14 | 15 | 16 |
 
-This grid is the “state” and is modified until it becomes the cyphertext  
+This grid is the “state” and is modified until it becomes the ciphertext  
 Some operations act just on individual bits  
 Some operations act on an individual row  
 Some operations act on an individual column  
