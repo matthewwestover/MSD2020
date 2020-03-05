@@ -50,13 +50,13 @@ Lives between the Application and Transport layer
 
 Consists of two parts:
  
-1. A handshake that establishes any necessary session keys (and agreement about which cyphers to use)
+1. A handshake that establishes any necessary session keys (and agreement about which ciphers to use)
 2. Record format (for actually sending data)
 
 Handshake is typically used to authenticate the server, S, with the client, C, (like talking to google directly) and then set up the session keys. It happens just after the TCP handshake. This is a slow process:
 
-* C to S: Client hello, contains list of supported "cypher suites" and a random nonce (Rc)
-* S to C: Server hello, server certificate (includes server public key), chosen cypher suite (which of the ones listed by client), random nonce (Rs)
+* C to S: Client hello, contains list of supported "cipher suites" and a random nonce (Rc)
+* S to C: Server hello, server certificate (includes server public key), chosen cipher suite (which of the ones listed by client), random nonce (Rs)
 * C to S: Encrypt(PreMasterSecret, ServerPublicKey) - PMS is based on Rc and Rs
 * S to C: MAC(all handshake messages + "SRVR")
 * C to S: MAC(all handshake messages + "CLNT”)
