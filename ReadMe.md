@@ -8,3 +8,7 @@
 * CS 6013 - Systems I - Operating Systems
 * CS 6014 - Systems II - Networking and Security
 * CS 6015 - Software Engineering
+
+### Summer 2020
+* CS 6016 - Database Systems
+* CS 6017 - Data Analytics and Visualization
