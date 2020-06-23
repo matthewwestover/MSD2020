@@ -1095,12 +1095,12 @@ You can also use list comprehension to create a list based on another list:
 [x for x in rands if str(x)[2] == '1']
 ```
 
-### Pandas
-### Lecture 5 - Dictionaries, Series
+# Introduction to Data Science - Lecture 5 - Dictionaries, Series
+*COMP 5360 / MATH 4100, University of Utah, http://datasciencecourse.net/*
 
 In this lecture we will, after a quick recap, introduce more data structures: sets, dictionaries, and series. While sets and dictionaries are built-in Python data structures, series (and dataframes, which we'll cover in the next lab) are part of the [pandas library](http://pandas.pydata.org/) tailored to data science applications.
 
-#### If-Statements Recap
+## If-Statements Recap
 
 * By using if-elif-else statements we can realize conditional flow in a program. 
 * If an elif take a parameter that is tested for truth. The parameter can be a boolean (`True` or `False`), or any other data type. 
@@ -1131,7 +1131,7 @@ factors(13)
 
 
 
-#### Lists Recap
+## Lists Recap
 
 **A list is a collection of items.**   
 **Lists are created with square brackets `[]` and can be accessed via an index:**
@@ -1283,7 +1283,7 @@ bands
 
 
 
-##### While Loop Recap
+### While Loop Recap
 
 While loops use the `while` keyword, a condition, and the loop body:
 
@@ -1319,7 +1319,7 @@ while (True):
 
     1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 
 
-##### For Loop Recap
+### For Loop Recap
 
 
 For loops are mainly used to iterate over items of a sequence. 
@@ -1356,7 +1356,7 @@ for i in range(10):
     9
 
 
-#### 1. Tuples
+## 1. Tuples
 
 [Tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) are a list-like data structure that are, in contrast to lists **immutable**. 
 
@@ -1476,7 +1476,7 @@ a, b
 
 
 
-##### Aside: Functions with Multiple Return Values
+### Aside: Functions with Multiple Return Values
 
 Consider the following code:
 
@@ -1526,7 +1526,7 @@ print(what, i_s, going, on)
     this is really nice
 
 
-#### 2. Sets
+## 2. Sets
 
 A [set](https://docs.python.org/3/tutorial/datastructures.html#sets) is a mutable collection, similar to a list, however, it is
  * **not ordered**, and
@@ -1675,7 +1675,7 @@ for name in usernames:
 
 Make sure to check out the [documentation](https://docs.python.org/3.5/library/stdtypes.html#set) to see what else a set can do. 
 
-#### Exercise 2: Sets
+## Exercise 2: Sets
 
 Write a function that finds the overlap of two sets and prints them. Initialize two sets, e.g., with values {13, 25, 37, 45, 13} and {14, 25, 38, 8, 45} and call this function with them.
 
@@ -1694,7 +1694,7 @@ print(setIntersect(set1, set2))
     {25, 45}
 
 
-#### 3. Dictionaries
+## 3. Dictionaries
 
 [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) are related to sets, but are more powerful: in addition to the key used to identify an element in a set, dictionaries also store a value associated with a key. Other terms commonly used for dictionaries are *associative arrays*, *(hash) maps*, and *hash tables*. 
 
@@ -1769,13 +1769,6 @@ numbers[3]
 musicians["John"]
 ```
 
-
-
-
-    'Zeppelin'
-
-
-
 We can add elements to a dict:
 
 
@@ -1825,7 +1818,7 @@ del musicians["Thom"]
 
     KeyError                                  Traceback (most recent call last)
 
-    <ipython-input-43-4d3b8f26b654> in <module>
+    <ipython-input-42-4d3b8f26b654> in <module>
     ----> 1 del musicians["Thom"]
     
 
@@ -1929,14 +1922,14 @@ for k in musicians:
     Ringo
 
 
-##### Exercise 3: Dictionaries
+### Exercise 3: Dictionaries
 
  * Create a dictionary with two-letter codes of two of US states and the full names, e.g., UT: Utah, NY: New York
  * After initially creating the dictionary, add two more states to the dictionary.
  * Create a second dictionary that maps the state codes to an array of cities in that state, e.g., UT: [Salt Lake City, Ogden, Provo, St. George]. 
  * Write a function that takes a state code and prints the full name of the state and lists the cities in that state.
 
-#### 4. Working with Modules
+## 4. Working with Modules
 
 While we briefly touched on modules (remember the `import math` statement), we haven't really talked about what a module is. Modules are used, ugh, to modularize code. You can write a module by simply creating a `.py` file. We won't be writing many modules ourselves, but we will use them extensively.
 
@@ -2007,7 +2000,7 @@ m.sqrt(13)
 
 
 
-#### 5. The Pandas Library: Series
+## 5. The Pandas Library: Series
 
 Pandas is a popular library for manipulating vectors, tables, and time series. We will frequently use Pandas data structures instead of the built-in python data structures, as they provide much richer functionality. Also, Pandas is **fast**, which makes working with large datasets easier.  Check out the official pandas website at [http://pandas.pydata.org/](http://pandas.pydata.org/).
 
@@ -2168,13 +2161,6 @@ bands_founded.index
 bands_founded.values
 ```
 
-
-
-
-    array([1962, 1960, 1968, 1965, 2012])
-
-
-
 We can access individual entries as we'd access an array or a dictionary:
 
 
@@ -2284,7 +2270,7 @@ Notice that there is also an `ix` indexer, which, however, is deprecated and sho
 
 These ways of accessing slices of a dataset (`loc`, `iloc`), will make more sense when we use dataframes instead of series - in dataframes, `loc` and `iloc` operate on the rows, whereas square brackets operate on the columns.
 
-##### Iterating
+### Iterating
 
 Iteration works as you would expect: 
 
@@ -2313,7 +2299,7 @@ for band, founded in bands_founded.items():
     Pink Floyd, 2012
 
 
-##### Updating
+### Updating
 Updating works largely as expected, however, you have to be careful when updating series with duplicate indices:
 
 
@@ -2436,7 +2422,7 @@ bands_founded
 
 
 
-##### Deleting 
+### Deleting 
 
 Deleting is rarely done with pandas data structures, instead filters and masks are used. It's possible based on indices:
 
@@ -2457,7 +2443,7 @@ bands_founded
 
 
 
-##### Indexing and slicing
+### Indexing and slicing
 
 Indexing and slicing works largely like in normal python, but instead of just directly using the bracket notations, it is recommended to use `iloc` for indexing by position and `loc` for indexing by index. 
 
@@ -2575,7 +2561,7 @@ bands_founded.loc[[True, False, False, True]]
 
 
 
-##### Masking and Filtering
+### Masking and Filtering
 
 With pandas we can create boolean arrays that we can use to mask and filter a dataset. In the following expression, we'll create a new array that has "True" for every band formed after 1964:
 
@@ -2653,7 +2639,7 @@ bands_founded[bands_founded > 1967]
 
 **This is a super useful thing.  We'll use it to select rows from tables a lot!**
 
-#### Exploring a Series
+## Exploring a Series
 
 There are various way we can explore a series. We can count the number of non-null values: 
 
@@ -2780,10 +2766,10 @@ bands.describe()
 
 
 
-    count             7
-    unique            7
-    top       The Doors
-    freq              1
+    count           7
+    unique          7
+    top       The Who
+    freq            1
     dtype: object
 
 
@@ -2826,7 +2812,7 @@ numbers.min()
 
 
 
-#### Sorting 
+## Sorting 
 
 We can sort a series:
 
@@ -2921,7 +2907,7 @@ new_sorted_numbers.sort_index()
 
 
 
-#### Applying a Function
+## Applying a Function
 
 Often, we will want to apply a function to all values of a Series. We can do that with the map function:
 
@@ -2971,6 +2957,116 @@ new_sorted_numbers.map({1965:1945, 2012:1999, 1968:"What"})
 
 
 
-#### Conclusion
+## Conclusion
 
 Series (and data frames, which we will tackle in the next lab) are incredibly powerful. We've only covered a small part of the features here. Make sure to also check out resources such as the [10 minutes to pandas guide](http://pandas.pydata.org/pandas-docs/stable/10min.html).
+
+### Exercise 4: Pandas Series
+
+Create a new pandas series with the lists given below that contain NFL team names and the number of Super Bowl titles they won. Use the names as indices, the wins as the data.
+
+ * Once the list is created, sort the series alphabetically by index. 
+ * Print an overview of the statistical properties of the series. What's the mean number of wins?
+ * Filter out all teams that have won less than four Super Bowl titles
+ * A football team has 45 players. Update the series so that instead of the number of titles, it reflects the number of Super Bowl rings given to the players. 
+ * Assume that each ring costs \\$ 30,000. Update the series so that it contains a string of the dollar amount including the \\$ sign. For the Steelers, for example, this would correspond to: 
+ ```
+ Pittsburgh Steelers             $ 8100000
+ ```
+
+
+
+```python
+teams = ["Pittsburgh Steelers",
+"New England Patriots",
+"Dallas Cowboys",
+"San Francisco 49ers",
+"Green Bay Packers",
+"New York Giants",
+"Denver Broncos",
+"Oakland/Los Angeles Raiders",
+"Washington Redskins",
+"Miami Dolphins",
+"Baltimore/Indianapolis Colts",
+"Baltimore Ravens"]
+wins = [6,6,5,5,4,4,3,3,3,2,2,2]
+```
+
+
+```python
+ts = pd.Series(wins, index=teams)
+display(ts)
+
+ts = ts.sort_index()
+display(ts)
+
+top = ts[ts >= 4]
+display(top)
+
+rings = top*45
+display(rings)
+
+salary = rings.map(lambda ring_count : '$' + str(30000 *ring_count))
+display(salary)
+```
+
+
+    Pittsburgh Steelers             6
+    New England Patriots            6
+    Dallas Cowboys                  5
+    San Francisco 49ers             5
+    Green Bay Packers               4
+    New York Giants                 4
+    Denver Broncos                  3
+    Oakland/Los Angeles Raiders     3
+    Washington Redskins             3
+    Miami Dolphins                  2
+    Baltimore/Indianapolis Colts    2
+    Baltimore Ravens                2
+    dtype: int64
+
+
+
+    Baltimore Ravens                2
+    Baltimore/Indianapolis Colts    2
+    Dallas Cowboys                  5
+    Denver Broncos                  3
+    Green Bay Packers               4
+    Miami Dolphins                  2
+    New England Patriots            6
+    New York Giants                 4
+    Oakland/Los Angeles Raiders     3
+    Pittsburgh Steelers             6
+    San Francisco 49ers             5
+    Washington Redskins             3
+    dtype: int64
+
+
+
+    Dallas Cowboys          5
+    Green Bay Packers       4
+    New England Patriots    6
+    New York Giants         4
+    Pittsburgh Steelers     6
+    San Francisco 49ers     5
+    dtype: int64
+
+
+
+    Dallas Cowboys          225
+    Green Bay Packers       180
+    New England Patriots    270
+    New York Giants         180
+    Pittsburgh Steelers     270
+    San Francisco 49ers     225
+    dtype: int64
+
+
+
+    Dallas Cowboys          $6750000
+    Green Bay Packers       $5400000
+    New England Patriots    $8100000
+    New York Giants         $5400000
+    Pittsburgh Steelers     $8100000
+    San Francisco 49ers     $6750000
+    dtype: object
